@@ -1,0 +1,62 @@
+body,
+header,
+input,
+form,
+section,
+span,
+li,
+ul,
+div,
+hr,
+button,
+a,
+p,
+img,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+a.active.focus,
+a.active:focus,
+a.focus,
+a:active.focus,
+a:active:focus,
+a:focus,
+button.active.focus,
+button.active:focus,
+button.focus,
+button:active.focus,
+button:active:focus,
+button:focus {
+  outline: 0!important;
+  outline-color: transparent!important;
+  outline-width: 0!important;
+  outline-style: none!important;
+  box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+}
+input:invalid {
+  box-shadow: none;
+}
+input,
+button {
+  border: none;
+}
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+a {
+  color: #fff;
+}
+.row.slim {
+  margin-left: 0;
+  margin-right: 0;
+}
+.row.slim > [class^="col-"],
+.slim > [class*=" col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}

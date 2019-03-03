@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "AdobeClean";
+  src: url(../fonts/AdobeClean-Bold.ttf);
+  font-weight: 700;
+}
+@font-face {
+  font-family: "AdobeClean";
+  src: url(../fonts/AdobeClean-BoldSemiCn.ttf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "AdobeClean";
+  src: url(../fonts/AdobeClean-Regular.ttf);
+  font-weight: 400;
+}
