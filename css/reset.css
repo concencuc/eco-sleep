@@ -35,10 +35,12 @@ button:focus {
   outline-color: transparent!important;
   outline-width: 0!important;
   outline-style: none!important;
-  box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+  -webkit-box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
+          box-shadow: 0 0 0 0 rgba(0, 123, 255, 0) !important;
 }
 input:invalid {
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 input,
 button {
@@ -50,6 +52,7 @@ a:hover {
 }
 a {
   color: #fff;
+  text-decoration: none;
 }
 .row.slim {
   margin-left: 0;

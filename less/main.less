@@ -159,27 +159,55 @@ body {
 		transform: translateX(-50%);
 
 	}
-	.line {
-		animation: move 3s infinite;
-		animation-delay:.3s;
-		animation-timing-function: ease-in-out; 
-		bottom: 0;
+	.line-wrapper {
+		overflow: hidden;
 		position: absolute;
-		left: 50%;
-		transform: translateX(-50%);
 		width: 1px;
 		height: 206px;
+		bottom: 0;
+		left: 50%;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	.line {
+		animation-delay: 0s;
+		animation-direction: normal;
+		animation-duration: 2.5s;
+		animation-fill-mode: none;
+		animation-iteration-count: infinite;
+		animation-name: move;
+		animation-play-state: running;
+		animation-timing-function: ease-out;
+		top: 0;
+		position: absolute;
+		width: 100%;
+		height: 100%;
 		background-color: #ffffff;
 	}
 	@keyframes move {  
-	  from {
-	    left: 0;
-	    bottom: 0px; 
-	  }
-	  to { 
-	    left: 0px; 
-	    bottom: -206px;
-	  }  
+		0% {
+		    -webkit-transform: translateY(-100%);
+		    transform: translateY(-100%);
+		    opacity: 0;
+		}
+		25% {
+		    -webkit-transform: translateY(0%);
+		    transform: translateY(0%);
+		    opacity: 1;
+		}
+		75% {
+		    -webkit-transform: translateY(0%);
+		    transform: translateY(0%);
+		    opacity: 1;
+		}
+		90% {
+		    opacity: 0;
+		}
+		100% {
+		    opacity: 0;
+		    -webkit-transform: translateY(100%);
+		    transform: translateY(100%);
+		}
 	}
 }
 
@@ -277,22 +305,31 @@ body {
 }
 
 .content-section {
-	background: url(../img/koren.png) no-repeat;
-	background-position: 54% top;
+	&__wrapper {
+		position: relative;
+		min-height: 1000px;
+		background: url(../img/woman.png) no-repeat;
+		background-position: 135% bottom;
+	}
+	.koren {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		margin-left: -253px;
+		width: 558px;
+		height: 397px;
+	}
 	h2 {
 		padding-top: 170px;
 		background: linear-gradient(green, red);  
 		color: transparent;
 		background-image: linear-gradient(-29deg, #57b016 0%, #a4d905 100%);
+		-webkit-background-clip: text;
+		-moz-background-clip: text;
 		background-clip: text;
 		font-size: 40px;
 		font-weight: 700;
 		letter-spacing: 3.6px;
-	}
-	&__wrapper {
-		min-height: 1000px;
-		background: url(../img/woman.png) no-repeat;
-		background-position: 135% bottom;
 	}
 	&__list {
 		margin-top: 80px;
@@ -496,12 +533,180 @@ body {
 	}
 }
 
+.innovation-section {
+	height: 700px;
+	padding-top: 100px;
+	background: url(../img/cpiral.png) center center no-repeat;
+	&__text {
+		h2 {
+			background-image: linear-gradient(-29deg, #57b016 0%, #a4d905 100%);
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			background-clip: text;
+			color: transparent;
+			font-size: 40px;
+			font-weight: 600;
+			/* Text style for "Н, аука и" */
+			letter-spacing: 3.6px;
+		}
+		p {
+			margin-top: 60px;
+			max-width: 715px;
+			color: #000000;
+			font-size: 18px;
+			font-weight: 400;
+			letter-spacing: 1.32px;
+		}
+		.innovation-btn {
+			margin-top: 76px;
+			width: 233px;
+			height: 66px;
+			line-height: 66px;
+			color: #ffffff;
+			font-size: 18px;
+			font-weight: 700;
+			letter-spacing: 1.08px;
+		}
+	}
+	&__img {
+		img {
+			float: right;
+		}
+	}
+}
 
+.confederate-section {
+	height: 100vh;
+	padding-top: 240px;
+	background: url(../img/choto-fon.png) center center no-repeat;
+	background-size: cover;
+	h2 {
+		text-align: center;
+		color: #ffffff;
+		font-size: 40px;
+		font-weight: 500;
+		letter-spacing: 3.6px;
+	}
+	p {
+		margin: 0 auto;
+		text-align: center;
+		margin-top: 60px;
+		width: 590px;		
+		color: #ffffff;
+		font-size: 22px;
+		font-weight: 400;
+		letter-spacing: 1.32px;
+	}
+	.confederate-btn {
+		margin: 0 auto;
+		margin-top: 60px;
+		width: 300px;
+		height: 67px;
+		line-height: 67px;
+		color: #ffffff;
+		font-size: 18px;
+		font-weight: 700;
+		letter-spacing: 1.08px;
+	}
+}
 
+.pressa-section {
+	height: 1010px;
+	padding-top: 120px;
+	h2 {
+		font-size: 50px;
+		color: #000;
+		font-weight: 400;
+		text-align: center;
+	}
+	&__slider {
+		margin-top: 95px;
+		&-item {
+			img {
+				margin: 0 auto;
+				line-height: 222px;
+			}
+			p {
+				margin: 0 auto;
+				cursor: pointer;
+				margin-top: 50px;
+				text-align: center;
+				max-width: 325px;
+			}
+		}
+	}
+	.pressa-item__img {
+		min-height: 222px;
+		display: flex;
+		align-items: center;
+	}
+	.slick-track {
+		display: flex;
+		align-items: center;
+	}
+	&__prevArrow {
+		cursor: pointer;
+		background: url(../img/pressa/prewArrow.png) center center no-repeat;
+		position: absolute;
+		left: 339px;
+		bottom: -124px;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		border: 1px solid #888888;
+	}
+	&__nextArrow {
+		cursor: pointer;
+		background: url(../img/pressa/nextArrow.png) center center no-repeat;
+		position: absolute;
+		left: 844px;
+		bottom: -124px;
+		border-radius: 50%;
+		width: 50px;
+		height: 50px;
+		border: 1px solid #888888;
+	}
+	.pressa-btn {
+		margin: 0 auto;
+		margin-top: 70px;
+		font-size: 22px;
+		width: 255px;
+		height: 55px;
+		line-height: 55px;
+		&:hover {
+			color: #454545;
+		}
+	}
+}
 
-
-
-
+.order-section {
+	padding-top: 170px;
+	background: url(../img/order-fon.png) center center no-repeat;
+	background-size: cover;
+	height: 1078px;
+	h2 {
+		color: #fff;
+		font-size: 60px;
+		font-weight: 700;
+		text-align: center;
+	}
+	p {
+		color: #fff;
+		margin-top: 50px;
+		font-size: 30px;
+		font-weight: 600;
+		text-align: center;
+	}
+	.order-btn {
+		margin: 0 auto;
+		margin-top: 76px;
+		width: 261px;
+		height: 67px;
+		line-height: 67px;
+		background-image: linear-gradient(79deg, #57b016 0%, #a4d905 100%);
+		
+	}
+}
 
 
 

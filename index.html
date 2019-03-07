@@ -8,10 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="slick/slick.css">
+    <link rel="stylesheet" href="slick/slick-theme.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <title>Eco sleep</title>   
+    <title>Eco sleep popor</title>   
   </head>
   <body>
     <div class="intro-section">
@@ -52,7 +54,9 @@
       </div>
       <div class="scroll-indication-wrapper">
         <img src="img/mishka.png" alt="">
-        <div class="line"></div>
+        <div class="line-wrapper">
+          <div class="line"></div>
+        </div>
       </div>
     </div>
     <div class="harmony-section">
@@ -106,7 +110,10 @@
     </div>
     <div class="content-section">
       <div class="container">
-        <div class="content-section__wrapper">     
+        <div class="content-section__wrapper">    
+          <div class="koren">
+            <img src="img/koren.png" alt="">
+          </div>  
           <h2>
             Вдохновившись природой,<br>
             мы создали ecosleep cube
@@ -202,6 +209,96 @@
         </div>
       </div>
     </div>
+    <div class="innovation-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-7 innovation-section__text">
+            <h2>
+              Наука и инновации <br>
+              на страже вашего сна
+            </h2>
+            <p>
+              ecosleep объединил усилия ученых, технологов и инженеров, чтобы 
+              подарить вам качественное устройство для нормализации сна и сновидений.
+              Над ним работают ведущие специалисты в области сна в коллаборации с 
+              институтами и исследовательскими центрами.
+            </p>
+            <a href="#" class="eco-btn innovation-btn">
+              наши исследования
+            </a>
+          </div>
+          <div class="col-5 innovation-section__img">
+            <img src="img/mozg.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="confederate-section">
+      <div class="container">
+        <h2>
+          Команда единомышленников, <br>
+          которая любит сон и природу
+        </h2>
+        <p>
+          Мы не равнодушны к вызовам, представшим перед человечеством:
+          человек возводит стену между собой и естественной природой, которая нас окружает.
+          Теперь здоровый сон находится под угрозой антропогенных факторов, 
+          и мы готовы находить компромиссы между развивающейся 
+          технологией и гармонией природы
+        </p>
+        <a href="#" class="eco-btn confederate-btn">Присоединяйтесь к нам!</a>
+      </div>
+    </div>
+    <div class="pressa-section">
+      <h2>Пресса о нас</h2>
+      <div class="container">
+        <div class="pressa-section__slider">
+          <div class="pressa-section__slider-item">
+            <div class="pressa-item__img">
+             <img src="img/pressa/russia-1.png" alt="">      
+            </div>
+            <p>
+              «Российские ученые разработали
+              инновационное устройство для сна»
+            </p>
+          </div>
+          <div class="pressa-section__slider-item">
+            <div class="pressa-item__img">
+             <img src="img/pressa/izvestiya.png" alt="">      
+            </div>
+            <p>
+              «На сонной волне: ученые изобрели прибор, который ускоряет засыпание»
+            </p>
+          </div>
+          <div class="pressa-section__slider-item">
+            <div class="pressa-item__img">
+             <img src="img/pressa/rtk.png" alt="">      
+            </div>
+            <p>
+              «Коллектив российских ученых создал прибор для лечения бессонницы на основе слабых электромагнитных полей»
+            </p>
+          </div>
+          <div class="pressa-section__slider-item">
+            <div class="pressa-item__img">
+             <img src="img/pressa/russia-1.png" alt="">      
+            </div>
+            <p>
+              «На сонной волне: ученые изобрели прибор, который ускоряет засыпание»
+            </p>
+          </div>
+        </div>
+        <a href="#" class="o-btn pressa-btn">
+          больше новостей
+        </a>
+      </div>
+    </div>
+    <div class="order-section">
+      <h2>Твое путешествие начинается сегодня</h2>
+      <p>Начните менять свой сон с ecosleep</p>
+      <a href="#" class="eco-btn order-btn">
+        заказать ecosleep
+      </a>
+    </div>
     <div class="footer">
       
     </div>
@@ -225,6 +322,19 @@
         }
       });
     </script>
-
+    <!-- слайдер партнеров -->
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript">  
+      $(document).ready(function(){
+        $('.pressa-section__slider').slick({
+          infinite: true,
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          arrows: true,
+          prevArrow: '<div class="pressa-section__prevArrow" src="img/pressa/arrow-pressa.png"></div>',
+          nextArrow: '<div class="pressa-section__nextArrow" src="img/pressa/arrow-pressa.png"></div>'
+        });
+      });
+    </script>
   </body>
 </html>
